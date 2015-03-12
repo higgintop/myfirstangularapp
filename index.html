@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-US" ng-app="tas">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Title</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <div class="container">
+      <h1><a href="/#/tas">My TAddress Book</a></h1>
+      <a ng-show="user" class="btn btn-primary" href="/#/tas/new">New TA</a>
+      <a ng-show="user" class="btn btn-danger" href="/#/logout">Logout</a>
+      <div ng-view></div>
+    </div>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="js/main.module.js"></script>
+    <script src="js/auth/auth.config.js"></script>
+    <script src="js/main.config.js"></script>
+    <script src="js/main.constants.js"></script>
+    <script src="js/main.filters.js"></script>
+    <script src="js/auth/auth.factory.js"></script>
+    <script src="js/auth/auth.controller.js"></script>
+    <script src="js/auth/logout.controller.js"></script>
+    <script src="js/tas/ta.factory.js"></script>
+    <script src="js/tas/edit.controller.js"></script>
+    <script src="js/tas/show.controller.js"></script>
+    <script src="js/tas/ta.controller.js"></script>
+
+  </body>
+</html>
